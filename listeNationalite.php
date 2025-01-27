@@ -10,7 +10,7 @@ $lesNationalites=$req->fetchALL();
     <div class="container mt-5">
     <div class="row pt-3">    
         <div class="col-9"><h2>  Listes des nationalités</h2></div>
-        <div class="col-3"> <a href="FormAjoutNationalite.php" class='btn-success'> <i class="fas fa-plus-circle"></i> Créer une nationalité </a></div>
+        <div class="col-3"> <a href="FormNationalite.php?action=ajouter" class='btn-success'> <i class="fas fa-plus-circle"></i> Créer une nationalité </a></div>
     </div>
         <table class="table table-hover table-striped">
             <thead>
@@ -28,7 +28,7 @@ $lesNationalites=$req->fetchALL();
                 echo "<td class='col-md-2' >$nationalite->num</td>";
                 echo "<td class='col-md-8'>$nationalite->libelle</td>";
                 echo  "<td class='col-md-2'>
-                    <a href='' class='btn btn-primary'> <i class='fas fa-pen'></i>  </a>
+                    <a href='FormNationalite.php?action=Modifier&num=$nationalite->num' class='btn btn-primary'> <i class='fas fa-pen'></i>  </a>
                     <a href='' class='btn btn-danger'> <i class='far fa-trash-alt'></i>  </a>
                 </td>";
                 echo "</tr>";
