@@ -29,10 +29,12 @@ $lesNationalites=$req->fetchALL();
                 echo "<td class='col-md-8'>$nationalite->libelle</td>";
                 echo  "<td class='col-md-2'>
                     <a href='FormNationalite.php?action=Modifier&num=$nationalite->num' class='btn btn-primary'> <i class='fas fa-pen'></i>  </a>
-                    <a href='' class='btn btn-danger'> <i class='far fa-trash-alt'></i>  </a>
+                    <a href='#modalSuppression' data-toggle='modal' data-suppression='SupprimerNationalite.php?num=$nationalite->num' class='btn btn-danger'> <i class='far fa-trash-alt'></i>  </a>
                 </td>";
                 echo "</tr>";
             }
+
+            // 
            
             ?>
             </tbody>
@@ -40,6 +42,26 @@ $lesNationalites=$req->fetchALL();
         </table>
 
     </div>
+    
+<div id="modalSuppression" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmation de suppression</h5>
+      </div>
+      <div class="modal-body">
+        <p>Voulez vous vraiment supprimer cette nationalite </p>
+      </div>
+      <div class="modal-footer">
+        <a href=""  class="btn btn-primary" id="btnSuppr">Supprimer</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ne pas supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
 <?php include "footer.php" ?>

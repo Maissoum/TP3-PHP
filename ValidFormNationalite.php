@@ -5,8 +5,7 @@ $action=$_GET['action'];
 $num=$_POST['num']; // je récupère le libellé du fomulaire
 $libelle=$_POST['libelle']; // je récupère le libellé du fomulaire
 
-
-if($action == "Mofifier") 
+if($action == "Modifier") 
 {
     $req=$monPdo->prepare("update nationalite set libelle = :libelle where num = :num");
     $req->bindParam(':num', $num );

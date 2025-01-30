@@ -9,8 +9,21 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script>
     
-    <script src="https://kit.fontawesome.com/a015a4caf1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a015a4caf1.js" crossorigin="anonymous">  </script>
+
+    <script type="text/javascript">  
+
+        $("a[data-suppression]").clik(function() 
+        {
+            var lien = $(this).attr("data-suppression"); 
+            $("#btnSuppr").attr("href",lien);
+        });
+
+    </script>
+
 
 </body>
 
 </html>
+
+
